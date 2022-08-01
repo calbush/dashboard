@@ -8,27 +8,158 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="dashboard">Dash</div>
-    <div id="header">Head</div>
+    <div id="dashboard">
+        <div id="btnContainer">
+            <div id="firstGrid">
+                <div class="row"><button id="dashBtn"></button><a href="index.html" id="dashHead">Dashboard</a></div>
+            </div>
+            <div id="secondGrid">
+                <div class="row"><button id="homeBtn"></button><a href="index.html" id="home">Home</a></div>
+                <div class="row"><button id="profileBtn"></button><a href="index.html" id="profileLink">Profile</a></div>
+                <div class="row"><button id="messagesBtn"></button><a href="index.html" id="messages">Messages</a></div>
+                <div class="row"><button id="historyBtn"></button><a href="index.html" id="history">History</a></div>
+                <div class="row"><button id="tasksBtn"></button><a href="index.html" id="tasks">Tasks</a></div>
+                <div class="row"><button id="communitiesBtn"></button><a href="index.html" id="communities">Communities</a></div>
+            </div>
+            <div id="thirdGrid">
+                <div class="row"><button id="settingsBtn"></button><a href="index.html" id="settings">Settings</a></div>
+                <div class="row"><button id="supportBtn"></button><a href="index.html" id="support">Support</a></div>
+                <div class="row"><button id="privacyBtn"></button><a href="index.html" id="privacy">Privacy</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="header">
+        <div id="topBar">
+            <button id="searchButton"></button>
+            <input type="search" id="searchBar">
+            <button id="notification"></button>
+            <img src="images/TravelFrog_logo.png" alt="Your profile picture" id="topProfile">
+            <div id="name">Caleb Bush</div>
+        </div>
+        <div id="bottomBar">
+            <img src="images/TravelFrog_logo.png" alt="Your profile picture" id="bottomProfile">
+            <div id="textHolder">
+                <div id="greeting">Hi there,</div>
+                <div id="profAt">
+                    <div id="prof">Caleb Bush</div>
+                    <div id="at">(@caleb_bush2)</div>
+                </div>
+            </div>
+            <button id="new" class="actionBtn">New</button>
+            <button id="upload" class="actionBtn">Upload</button>
+            <button id="share" class="actionBtn">Share</button>
+        </div>
+    </div>
     <div id="cardContainer">
-        <h4 id="projects">Your Projects</h4>
+        <h4 id="projects">Your Projects</h4>           
+        <h4 id="announcements">Announcements</h4>
         <div id="cards">
-            <div class="card">Super Cool Project</div>
-            <div class="card">Less Cool Project</div>
-            <div class="card">Impossible App</div>
-            <div class="card">Easy Peasy App</div>
-            <div class="card">Ad Blocker</div>
-            <div class="card">Money Maker</div>
+            <div class="card">
+                <h4 class="cardTextHead">Super Cool Project</h4>
+                <p class="cardText">Sed tempus ut lactus
+                ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.
+                </p>
+                <div class="cardBtnCont">
+                    <button class="star"></button><button class="eye"></button><button class="share"></button>
+                </div>
+            </div>
+            <div class="card">
+                <h4 class="cardTextHead">Less Cool Project</h4>
+                <p class="cardText">Turpis egestas pretium aenean pharetra magna ac placerat. Ipsum 
+                    dolor sit amet consectetur adipiscing elit. Euismod nisi porta lorem mollis aliquam. 
+                    Odio euismod lacinia at quis risus sed vulputate.
+                </p>
+                <div class="cardBtnCont">
+                    <button class="star"></button><button class="eye"></button><button class="share"></button>
+                </div>
+            </div>
+            <div class="card">
+                <h4 class="cardTextHead">Impossible App</h4>
+                <p class="cardText">Nulla facilisi cras fermentum odio eu. Rhoncus mattis rhoncus urna neque
+                     viverra justo nec. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper 
+                     malesuada.
+                </p>
+                <div class="cardBtnCont">
+                    <button class="star"></button><button class="eye"></button><button class="share"></button>
+                </div>
+            </div>
+            <div class="card">
+                <h4 class="cardTextHead">Easy Peasy App</h4>
+                <p class="cardText">Ultrices in iaculis nunc sed. Pharetra et ultrices neque ornare aenean 
+                    euismod elementum. Amet est placerat in egestas erat imperdiet sed.
+                </p>
+                <div class="cardBtnCont">
+                    <button class="star"></button><button class="eye"></button><button class="share"></button>
+                </div>
+            </div>
+            <div class="card">
+                <h4 class="cardTextHead">Ad Blocker</h4>
+                <p class="cardText">Natoque penatibus et magnis dis parturient. Mattis rhoncus urna neque viverra justo.
+                     Lobortis elementum nibh tellus molestie nunc non blandit.
+                </p>
+                <div class="cardBtnCont">
+                    <button class="star"></button><button class="eye"></button><button class="share"></button>
+                </div>
+            </div>
+            <div class="card">
+                <h4 class="cardTextHead">Money Maker</h4>
+                <p class="cardText">
+                    Viverra nam libero justo laoreet sit amet cursus sit. A erat nam at lectus urna duis convallis. Aliquet
+                     lectus proin nibh nisl condimentum.
+                </p>
+                <div class="cardBtnCont">
+                    <button class="star"></button><button class="eye"></button><button class="share"></button>
+                </div>
+            </div>
         </div>
         <div id="right">
-            <div id="announcements">
-                <h4>Announcements</h4>
-                <div id="content">CONTENT</div>
-            </div>
-            <div id="trending">
-                <h4>Trending</h4>
-                <div id="handles">HANDLES</div>
-            </div>
+                <div id="content">
+                    <div class="holder">
+                        <h4 class="announceHead">Site Maintenance</h4>
+                        <div class="announceBody">Ut morbi tincidunt augue interdum velit euismod in pellentesque massa.</div>
+                    </div>
+                    <div class="holder">
+                        <h4 class="announceHead">Community Share Day</h4>
+                        <div class="announceBody">Ut morbi tincidunt augue interdum velit euismod in pellentesque massa.</div>
+                    </div>
+                    <div class="holder">
+                        <h4 class="announceHead">Updated Privacy Policy</h4>
+                        <div class="announceBody">Ut morbi tincidunt augue interdum velit euismod in pellentesque massa.</div>
+                    </div>
+                </div>
+                <div id="trending">
+                    <h4 id="trendingHeader">Trending</h4>
+                    <div id="handles">
+                        <div class="innerHandle">
+                            <img src="images/spange.jpeg" alt="Spongebob profile picture" class="handlePic">
+                            <div class="handleText">
+                                <div class="foo">@tegan</div>
+                                <div class="bar">World Peace Builder</div>
+                            </div>
+                        </div>
+                        <div class="innerHandle">
+                                <img src="images/pikachuuu.jpeg" alt="Spongebob profile picture" class="handlePic">
+                                <div class="handleText">
+                                    <div class="foo">@morgan</div>
+                                    <div class="bar">Super Cool Project</div>
+                        </div>
+                            </div>
+                            <div class="innerHandle">
+                                <img src="images/squib.webp" alt="Spongebob profile picture" class="handlePic">
+                                <div class="handleText">
+                                    <div class="foo">@kendall</div>
+                                    <div class="bar">Life Changing App</div>
+                                </div>
+                            </div>
+                            <div class="innerHandle">
+                                <img src="images/animeu.webp" alt="Spongebob profile picture" class="handlePic">
+                                <div class="handleText">
+                                    <div class="foo">@alex</div>
+                                    <div class="bar">No Traffic Maker</div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
         </div>
     </div>
 </body>

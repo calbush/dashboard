@@ -1,22 +1,149 @@
-* {
+ {
     outline-style: dashed;
     outline-color: purple;
+}
+
+h4 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
 }
 
 body {
     background-color:blanchedalmond;
     display: grid;
-    grid-template-rows: 150px 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 #dashboard {
     background-color: aqua;
     grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: 6fr 4fr;
+    align-items: start;
 }
+
+#firstGrid {
+    display: grid;
+    grid-row: 1;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#secondGrid {
+    display: grid;
+    grid-row: 2;
+    gap: 1rem;
+}
+
+#thirdGrid {
+    display: grid;
+    grid-row: 3;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+#firstGrid > * {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+#secondGrid > * {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+#thirdGrid > * {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-self: start;
+}
+
+#btnContainer {
+    display: grid;
+    grid-template-rows: 2fr 5fr 4fr;
+    gap: 2rem;
+}
+
+#dashBtn {
+    background: url('images/view-dashboard.png') no-repeat;
+    height: 3rem;
+    width: 3rem;
+}
+
+#dashHead {
+    font-size: 1.5rem;
+    align-self: center;
+    justify-self: start;
+}
+
+#firstGrid > a {
+    justify-self: start;
+}
+
+.row > a {
+    font-size: 1.2rem;
+}
+
+.row > button {
+    height: 24px;
+    width: 24px;
+    justify-self: center;
+}
+
+#homeBtn {
+    background: url('images/home.png') no-repeat;
+}
+
+#profileBtn {
+    background: url('images/account-box.png') no-repeat;
+}
+
+#messagesBtn {
+    background: url('images/message-reply.png') no-repeat;
+}
+
+#historyBtn {
+    background: url('images/clock-time-four.png') no-repeat;
+}
+
+#tasksBtn {
+    background: url('images/note-multiple.png') no-repeat;
+}
+
+#communitiesBtn {
+    background: url('images/account-group.png') no-repeat;
+}
+
+#settingsBtn {
+    background: url('images/cog.png') no-repeat;
+}
+
+#supportBtn {
+    background: url('images/help-box.png') no-repeat;
+}
+
+#privacyBtn {
+    background: url('images/shield-check.png') no-repeat;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 #header {
     grid-column: 2 / -1;
+    display: grid;
+    gap: .5rem;
 }
 
 #cardContainer {
@@ -24,36 +151,222 @@ body {
     grid-column: 2 / -1;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: .5fr 1fr 1fr 1fr;
+    grid-template-rows: 3rem 1fr 1fr 1fr;
     padding: 15px;
-    gap: 15px;
 }
 
 #cards {
     grid-row: 2 / -1;
     grid-column: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(12rem, 1fr));
     padding: 15px;
+    gap: 15px;
+    justify-items: center;
+}
+
+.star {
+    background: url('images/star-plus-outline.png') no-repeat;
+    height: 24px;
+    width: 24px;
+}
+
+.eye {
+    background: url('images/eye-plus-outline.png') no-repeat;
+    height: 24px;
+    width: 24px;
+}
+
+.share {
+    background: url('images/share-variant-outline.png') no-repeat;
+    height: 24px;
+    width: 24px;
 }
 
 #projects {
     grid-column: 1;
+    align-self: end;
 }
 
 #right {
-    grid-row: 1 / -1;
+    grid-row: 2 / -1;
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
 
+#content {
+    align-items: center;
+    display: grid;
+    grid-template-rows: repeat(3, 6rem);
+    background-color: gray;
+}
+
+.handlePic {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+}
+
+.innerHandle {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+#trending {
+    display: grid;
+}
+
+#trendingHeader {
+    align-self: end;
+}
+
+#handles {
+    display: grid;
+    align-items: end;
+    grid-template-rows: repeat(4, 4rem);
+}
+
 .card {
-    height: 200px;
-    width: 300px;
+    height: 12rem;
+    width: 22rem;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    padding-left: .3rem;
+}
+
+.cardBtnCont {
+    justify-self: end;
+    display: flex;
+    gap: 2rem;
+}
+
+.cardTextHead {
+    align-self: end;
+}
+
+
+#announcements {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    align-self: end;
+}
+
+#topBar {
+    display: grid;
+    grid-template-columns: .5fr .5fr repeat(7, 1fr) .5fr 1fr 1fr;
+}
+
+#topProfile {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: teal;
+    grid-column: 11 / 12;
+    justify-self: center;
+    align-self: center;
+}
+
+#searchButton, #notification {
+    align-self: center;
     justify-self: center;
 }
-#trending {
-    
+
+#searchButton {
+    grid-column: 2;
+    background: url('images/magnify.png') no-repeat center;
+    height: 30px;
+    width: 30px;
+}
+
+#searchBar {
+    align-self: center;
+    grid-column: 3 / span 6;
+}
+
+#name {
+    grid-column: 12 / 13;
+    align-self: center;
+}
+
+
+#notification {
+    background: url('images/bell-ring-outline.png') no-repeat center;
+    height: 30px;
+    width: 30px;
+    grid-column: 10 / 11;
+}
+
+button {
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+#bottomProfile {
+    border-radius: 50%;
+    background-color: teal;
+    height: 4rem;
+    width: 4rem;
+    grid-column: 2;
+    align-self: center;
+    justify-self: end;
+}
+
+#bottomBar {
+    display: grid;
+    grid-template-columns: .5fr repeat(7, 1fr);
+    gap: 1rem;
+}
+
+#textHolder {
+    grid-column: 3;
+    width: 20rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#greeting {
+    grid-column: 1 / -1;
+    align-self: end;
+    font-size: 1rem;
+}
+
+#profAt {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: .6fr 1fr;
+    font-size: 1.5rem;
+
+}
+
+#prof {
+    font-size: 1.5rem;
+}
+
+#at{
+    grid-column: 2;
+    font-size: 1.4rem;
+}
+
+#new {
+    grid-column: 6;
+}
+
+#upload {
+    grid-column: 7;
+}
+
+#share {
+    grid-column: 8;
+}
+
+.actionBtn {
+    align-self: center;
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 38%;
 }
