@@ -1,6 +1,5 @@
- {
-    outline-style: dashed;
-    outline-color: purple;
+ * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h4 {
@@ -16,14 +15,14 @@ h4 {
 }
 
 body {
-    background-color:blanchedalmond;
+    background-color:#e8eaeb;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 #dashboard {
-    background-color: aqua;
+    background-color: #2daaed;
     grid-row: 1 / -1;
     display: grid;
     grid-template-rows: 6fr 4fr;
@@ -144,15 +143,19 @@ a {
     grid-column: 2 / -1;
     display: grid;
     gap: .5rem;
+    background-color: white;
+    box-shadow: 0 1px 2px;
 }
 
 #cardContainer {
     grid-row: 2 / -1;
     grid-column: 2 / -1;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3.5fr 1fr;
     grid-template-rows: 3rem 1fr 1fr 1fr;
     padding: 15px;
+    gap: 15px;
+
 }
 
 #cards {
@@ -161,9 +164,9 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(12rem, 1fr));
-    padding: 15px;
     gap: 15px;
-    justify-items: center;
+    justify-content: space-around;
+    align-items: start;
 }
 
 .star {
@@ -196,10 +199,13 @@ a {
 }
 
 #content {
-    align-items: center;
+    align-items: end;
     display: grid;
     grid-template-rows: repeat(3, 6rem);
-    background-color: gray;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: .1rem .1rem 4px;
+    padding: .7rem;
 }
 
 .handlePic {
@@ -225,6 +231,10 @@ a {
     display: grid;
     align-items: end;
     grid-template-rows: repeat(4, 4rem);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: .1rem .1rem 4px;
+    padding: .5rem;
 }
 
 .card {
@@ -232,7 +242,10 @@ a {
     width: 22rem;
     display: grid;
     grid-template-rows: 1fr 3fr 1fr;
-    padding-left: .3rem;
+    background: linear-gradient(90deg,#fdcd3b .3rem, white .3rem);
+    border-radius: 10px;
+    box-shadow: .1rem .1rem 4px;
+    padding: .3rem .8rem;
 }
 
 .cardBtnCont {
@@ -282,6 +295,8 @@ a {
 #searchBar {
     align-self: center;
     grid-column: 3 / span 6;
+    background-color:#e8eaeb;
+    border-radius: 10px;
 }
 
 #name {
@@ -367,6 +382,32 @@ button {
 .actionBtn {
     align-self: center;
     width: 5rem;
-    height: 1.5rem;
-    border-radius: 38%;
+    height: 2.2rem;
+    border-radius: 30px;
+    background-color: #2daaed;
+    color: white;
+}
+
+.cardText, .announceBody,
+.bar {
+    color: grey;
+}
+
+.cardTextHead,
+.announceHead,
+.foo,
+#projects,
+#announcements,
+#trendingHeader {
+    font-weight: bold;
+}
+
+#projects, #announcements, #trendingHeader
+{
+    font-size: 1.2rem;
+}
+
+.announceBody {
+    border-bottom-style: solid;
+    padding-bottom: 10px;
 }
